@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script>
+// １.〇配列に曜日を設定する処理を追加する。
+// その後にFor文で順番にコンソールに出力する。
+
+ var week = new Array("日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日");
+  console.log(week);
+    // for(var i = 0; i<7; i++){
+    //     console.log(week[i]);
+    // }
+// ２．〇設定した曜日の配列に英語のアルファベットの文字3文字をキーとして呼び出せるような配列を作成する。
+ var weeks = {sun:"日曜日",mon:"月曜日",tue:"火曜日",wed:"水曜日",thu:"木曜日",fri:"金曜日",sat:"土曜日"};
+
+
+// ３．〇設定している曜日の配列を英語に再設定する。
+// ただし最初の文字だけ大文字にして残りの文字を小文字にするように変換すること。
+ week.splice(0,7,"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+ console.log(week[0]);
+     
+     
+// 〇特定のボタンがマウスオーバーした場合、アラートで警告を出すように実装する。
+var target = document.getElementById('target');
+
+//ON
+target.addEventListener('mouseover', function() {
+　console.log('乗せないでください');
+}, false);
+
+
+     
+    </script>
+  </head>
+  <body>
+      
+   <div class="square_btn" href="#" id="target">ログイン</div>
+  </body>
+</html>　

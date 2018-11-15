@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+    <div>
+    <table class = "tablevalue">
+     <tr>
+     <td><label for="value-1">値1</label></td>
+     <td><input type="number" id="value-1" min="0" max = "9999" /></td>
+     </tr>
+     <tr>
+     <td><label for="value-2">値2</label></td>
+     <td><input type="number" id="value-2" min="0" max = "9999"/></td>
+     </tr> 
+     <tr>
+     <td><label for="value-3">値3</label></td>
+     <td><input type="button" id="target" value="チェック"/></td>
+     </tr>
+     </table>
+    </div>
+  <script>  
+ 　function check(){
+   var value1 = parseInt(document.getElementById("value-1").value,10); 
+　 var value2 = parseInt(document.getElementById("value-2").value,10); 
+   var target = document.getElementById("target");
+   
+   if(value1 >= 0 && value1 <= 9999 && value2 >= 0 && value2<= 9999){
+   alert("だいじょうぶ");
+   return;
+   }else {
+   alert("0~9999の数値を入力してください");
+   }
+   }
+   target.addEventListener("mouseover", check, false);
+ 　
+  </script>
+  
+  </body>
+</html>　
